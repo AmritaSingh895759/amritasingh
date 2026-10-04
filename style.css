@@ -46,7 +46,7 @@ section {
     transition: all 0.3s ease;
 }
 .logo:hover {
-    transform: scale(2.1);
+    transform: scale(1.1);
 }
 .navbar a {
     font-size: 1rem;
@@ -56,8 +56,9 @@ section {
     transition: 0.5s ease;
 }
 .navbar a:hover, 
-.navbar :active {
+.navbar a:active {
     color: black;
+    display: flex;
 }
 #menu-icon {
     font-size: 4.5rem;
@@ -364,6 +365,735 @@ span {
     margin-top: 20px;
 }
 
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+
+/* =========================
+   TABLET / LAPTOP
+   ========================= */
+
+@media (max-width: 1200px) {
+
+    html {
+        font-size: 80%;
+    }
+
+    .header {
+        padding: 18px 5%;
+    }
+
+    .navbar a {
+        margin-left: 2.5rem;
+    }
+
+    .home {
+        padding: 100px 5%;
+    }
+
+    .home-content {
+        margin-left: 3rem;
+    }
+
+    .home-content h1 {
+        font-size: 6rem;
+    }
+
+    .home-content h3 {
+        font-size: 3rem;
+    }
+
+    .home-content p {
+        font-size: 1.7rem;
+    }
+
+    .home-img img {
+        width: 28vw;
+        height: 28vw;
+    }
+
+    .about {
+        padding: 80px 5%;
+        gap: 3rem;
+    }
+
+    .about-img img {
+        width: 25vw;
+        height: 35vw;
+        margin-right: 2rem;
+    }
+
+    .about-content {
+        padding: 0 2rem;
+    }
+
+    .services-container {
+        padding: 0 5%;
+        gap: 2rem;
+    }
+}
+
+
+
+/* =========================
+   TABLET
+   ========================= */
+
+@media (max-width: 991px) {
+
+    html {
+        font-size: 70%;
+    }
+
+    section {
+        padding: 80px 5%;
+        min-height: auto;
+    }
+
+
+    /* HEADER */
+
+    .header {
+        padding: 15px 5%;
+    }
+
+    .navbar a {
+        font-size: 1.2rem;
+        margin-left: 2rem;
+    }
+
+
+    /* HOME */
+
+    .home {
+        min-height: 100vh;
+        padding-top: 120px;
+    }
+
+    .home-img img {
+        width: 32vw;
+        height: 32vw;
+    }
+
+    .home-content {
+        margin-left: 2rem;
+    }
+
+    .home-content h1 {
+        font-size: 5.5rem;
+    }
+
+    .home-content h3 {
+        font-size: 2.8rem;
+    }
+
+    .home-content p {
+        font-size: 1.6rem;
+    }
+
+
+    /* ABOUT */
+
+    .about {
+        gap: 2rem;
+    }
+
+    .about-img img {
+        width: 28vw;
+        height: 38vw;
+    }
+
+    .heading {
+        font-size: 5rem;
+    }
+
+    .about-content {
+        padding: 0 1rem;
+    }
+
+    .about-content h3 {
+        font-size: 3rem;
+    }
+
+    .about-content p {
+        font-size: 1.4rem;
+    }
+
+
+    /* SERVICES */
+
+    .services-container {
+        flex-wrap: wrap;
+    }
+
+    .services-container .services-box {
+        flex: 1 1 35rem;
+    }
+
+
+    /* CONTACT */
+
+    .contact form {
+        width: 90%;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    html {
+        font-size: 65%;
+    }
+
+    section {
+        padding: 80px 5% 50px;
+        min-height: auto;
+    }
+
+
+    /* ================= HEADER ================= */
+
+    .header {
+        padding: 15px 5%;
+    }
+
+    #menu-icon {
+        display: block;
+        font-size: 3.5rem;
+    }
+
+    .navbar {
+        position: absolute;
+
+        top: 100%;
+        left: 0;
+
+        width: 100%;
+
+        background: var(--main-color);
+
+        padding: 1rem 5%;
+
+        display: none;
+
+        flex-direction: column;
+
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* JavaScript se active class lagegi */
+
+    .navbar.active {
+        display: flex;
+    }
+
+    .navbar a {
+        display: block;
+
+        font-size: 1.6rem;
+
+        margin: 1.2rem 0;
+
+        color: rgb(76, 0, 255);
+    }
+
+    .navbar a:hover {
+        color: black;
+    }
+
+
+    /* ================= HOME ================= */
+
+    .home {
+
+        flex-direction: column-reverse;
+
+        text-align: center;
+
+        justify-content: center;
+
+        min-height: 100vh;
+
+        padding-top: 120px;
+
+        gap: 3rem;
+    }
+
+    .home-img {
+        margin-left: 0;
+    }
+
+    .home-img img {
+
+        width: 45vw;
+        height: 45vw;
+
+        max-width: 300px;
+        max-height: 300px;
+    }
+
+    .home-content {
+
+        margin-left: 0;
+
+        width: 100%;
+    }
+
+    .home-content h3 {
+        font-size: 2.5rem;
+    }
+
+    .home-content h1 {
+        font-size: 5rem;
+    }
+
+    .home-content p {
+
+        font-size: 1.6rem;
+
+        line-height: 1.6;
+
+        margin: 1rem 0;
+    }
+
+    .home-content a {
+
+        display: inline-block;
+
+        font-size: 1.6rem;
+
+        padding: 1rem 2.5rem;
+
+        margin-top: 1rem;
+    }
+
+
+    /* SOCIAL MEDIA */
+
+    .social-media {
+
+        text-align: center;
+    }
+
+    .social-media a {
+
+        width: 40px;
+        height: 40px;
+
+        font-size: 1.7rem;
+
+        margin: 1rem 0.5rem;
+    }
+
+
+    /* ================= ABOUT ================= */
+
+    .about {
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 3rem;
+
+        padding-top: 80px;
+    }
+
+    .about-img img {
+
+        width: 45vw;
+        height: 55vw;
+
+        max-width: 300px;
+        max-height: 350px;
+
+        margin-right: 0;
+    }
+
+    .heading {
+        font-size: 4rem;
+    }
+
+    .about-content {
+
+        padding: 0;
+
+        width: 100%;
+    }
+
+    .about-content h2 {
+
+        text-align: center;
+    }
+
+    .about-content h3 {
+
+        font-size: 2.7rem;
+    }
+
+    .about-content p {
+
+        font-size: 1.5rem;
+
+        line-height: 1.7;
+
+        margin: 1.5rem 0;
+    }
+
+    .about-content a {
+
+        display: inline-block;
+
+        font-size: 1.5rem;
+
+        padding: 1rem 2.5rem;
+    }
+
+
+    /* ================= SERVICES ================= */
+
+    .services h2 {
+
+        margin-bottom: 3rem;
+    }
+
+    .services-container {
+
+        flex-direction: column;
+
+        gap: 2rem;
+
+        padding: 0;
+    }
+
+    .services-container .services-box {
+
+        width: 100%;
+
+        flex: 1 1 auto;
+
+        padding: 2.5rem 2rem;
+    }
+
+    .services-box i {
+
+        font-size: 5rem;
+    }
+
+    .services-box h3 {
+
+        font-size: 2.3rem;
+
+        margin: 1rem 0;
+    }
+
+    .services-box p {
+
+        font-size: 1.4rem;
+
+        line-height: 1.6;
+    }
+
+    .services-container .services-box a {
+
+        display: inline-block;
+
+        font-size: 1.4rem;
+
+        padding: 1rem 2rem;
+
+        margin-top: 1.5rem;
+    }
+
+
+    /* ================= CONTACT ================= */
+
+    .contact {
+
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .contact .heading {
+
+        font-size: 3.5rem;
+    }
+
+    .contact h2 {
+
+        margin-bottom: 2rem;
+    }
+
+    .contact form {
+
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+    .contact form .input-box {
+
+        display: block;
+    }
+
+    .contact form .input-box input {
+
+        width: 100%;
+
+        margin: 0.7rem 0;
+    }
+
+    .contact form textarea {
+
+        width: 100%;
+
+        min-height: 180px;
+
+        resize: vertical;
+    }
+
+    .contact form .btn {
+
+        font-size: 1.7rem;
+
+        padding: 1rem 3rem;
+    }
+
+
+    /* ================= FOOTER ================= */
+
+    .footer {
+
+        padding: 35px 5%;
+    }
+
+    .footer .social {
+
+        padding-bottom: 20px;
+    }
+
+    .footer .social a {
+
+        width: 38px;
+        height: 38px;
+
+        line-height: 38px;
+
+        font-size: 20px;
+
+        margin: 0 5px;
+    }
+
+    .footer .copyright {
+
+        font-size: 1.4rem;
+
+        line-height: 1.5;
+
+        padding: 0 1rem;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+   ========================= */
+
+@media (max-width: 480px) {
+
+    html {
+        font-size: 60%;
+    }
+
+
+    /* HEADER */
+
+    .header {
+        padding: 12px 5%;
+    }
+
+    #menu-icon {
+        font-size: 3rem;
+    }
+
+
+    /* HOME */
+
+    .home {
+
+        padding-top: 100px;
+
+        gap: 2rem;
+    }
+
+    .home-img img {
+
+        width: 55vw;
+        height: 55vw;
+
+        max-width: 250px;
+        max-height: 250px;
+    }
+
+    .home-content h1 {
+
+        font-size: 4.2rem;
+    }
+
+    .home-content h3 {
+
+        font-size: 2.2rem;
+    }
+
+    .home-content p {
+
+        font-size: 1.4rem;
+    }
+
+
+    /* SOCIAL */
+
+    .social-media a {
+
+        width: 36px;
+        height: 36px;
+
+        font-size: 1.5rem;
+
+        margin: 1rem 0.3rem;
+    }
+
+
+    /* ABOUT */
+
+    .about-img img {
+
+        width: 55vw;
+        height: 65vw;
+
+        max-width: 250px;
+        max-height: 300px;
+    }
+
+    .heading {
+
+        font-size: 3.5rem;
+    }
+
+    .about-content h3 {
+
+        font-size: 2.4rem;
+    }
+
+    .about-content p {
+
+        font-size: 1.4rem;
+    }
+
+
+    /* SERVICES */
+
+    .services-box i {
+
+        font-size: 4.5rem;
+    }
+
+    .services-box h3 {
+
+        font-size: 2rem;
+    }
+
+    .services-box p {
+
+        font-size: 1.3rem;
+    }
+
+
+    /* CONTACT */
+
+    .contact .heading {
+
+        font-size: 3rem;
+    }
+
+    .contact form .input-box input,
+    .contact form textarea {
+
+        font-size: 1.4rem;
+
+        padding: 1rem;
+    }
+
+    .contact form .btn {
+
+        font-size: 1.5rem;
+
+        padding: 1rem 2.5rem;
+    }
+
+
+    /* FOOTER */
+
+    .footer .social a {
+
+        width: 35px;
+        height: 35px;
+
+        line-height: 35px;
+
+        font-size: 18px;
+
+        margin: 0 3px;
+    }
+
+}
+
+
+/* =========================
+   VERY SMALL MOBILE
+   ========================= */
+
+@media (max-width: 360px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    .home-content h1 {
+
+        font-size: 3.8rem;
+    }
+
+    .home-content h3 {
+
+        font-size: 2rem;
+    }
+
+    .home-img img {
+
+        width: 60vw;
+        height: 60vw;
+    }
+
+    .about-img img {
+
+        width: 60vw;
+        height: 70vw;
+    }
+
+    .heading {
+
+        font-size: 3rem;
+    }
+
+}
 
 
 
